@@ -1,1 +1,31 @@
-<p>inicio works!</p>
+<div class="container">
+    <button class="btn btn-primary" [routerLink]="['/agregar']" > Agregar  </button>
+    <table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col">Prioridad</th>
+        <th scope="col">Estado</th>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let usuario of lista">
+        <td>{{usuario.id}}</td>
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.prioridad}}</td>
+        <td>{{usuario.estado}}</td>
+        <td>
+            <button class="btn btn-danger"  (click)="eliminar(usuario.id)"> Eliminar  </button>
+            <button class="btn btn-warning"  [routerLink]="['/editar/',usuario.id]"> Modificar  </button>
+
+        </td>  
+    </tr>
+      
+    </tbody>
+  </table>
+</div>

@@ -8,7 +8,7 @@ import { UsuarioService } from 'src/app/SERVICE/usuario.service';
 })
 export class InicioComponent implements OnInit{
 
-
+lista:any=[];
   constructor(private usuarioService: UsuarioService ){}
 
   ngOnInit(): void {
@@ -17,11 +17,20 @@ export class InicioComponent implements OnInit{
 
   listarUsuarios(){
     this.usuarioService.getUsuarios().subscribe(
-       res=>{console.log(res);},
+       res=>{this.lista=res},
        err => console.log(err)
     );
 
 
   }
+
+eliminar(id:string){
+  this.usuarioService.deleteUsuario(id).subscribe(
+    res=> {this.ngOnInit();},
+    err=> console.log(err)
+  );
+}
+
+
 
 }

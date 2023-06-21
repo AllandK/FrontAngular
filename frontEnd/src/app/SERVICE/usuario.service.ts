@@ -42,7 +42,7 @@ deleteUsuario(id:string):Observable<any>
 export interface Usuario{
     id:string;
     email:string;
-    estado:string;
+    estado:number;
     nombre:string;
     prioridad:string;
 
