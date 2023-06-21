@@ -1,17 +1,21 @@
 <div class="container">
-     <form action="">
-         <label for="nombre" >Nombre</label>
-         <input  type="text" id="nombre" name="nombre"  [(ngModel)]="usuarioNuevo.nombre" >
-         <br>
-         <label for="email" >Email</label>
-         <input  type="text" id="email" name="email"  [(ngModel)]="usuarioNuevo.email" >
-         <br>
-         <label for="prioridad" >Prioridad</label>
-         <input  type="text" id="prioridad" name="prioridad"  [(ngModel)]="usuarioNuevo.prioridad" >
-         <br>
-         <label for="estado" >Estado</label>
-         <input  type="checkbox" id="estado" name="estado"  [(ngModel)]="usuarioNuevo.estado" >
-         <br>
+     <form>
+        <div class="form-group">
+         <label for="nombre" class="control-label">Nombre</label>
+         <input  type="text" class="form-control" id="nombre" name="nombre"  [(ngModel)]="usuarioNuevo.nombre" >
+         </div>
+         <div class="form-group">
+         <label for="email"  class="control-label" >Email</label>
+         <input  type="text" class="form-control" id="email" name="email"  [(ngModel)]="usuarioNuevo.email" >
+         </div>
+         <div class="form-group">
+         <label for="prioridad"  class="control-label">Prioridad</label>
+         <input  type="text" class="form-control" id="prioridad" name="prioridad"  [(ngModel)]="usuarioNuevo.prioridad" >
+         </div>
+         <div class="form-group">
+         <label for="estado"  class="control-label"> Estado</label>
+         <input  type="checkbox"  class="text-muted" id="estado" name="estado"  [(ngModel)]="usuarioNuevo.estado" >
+         </div>
          <button class="btn btn-primary" (click)="agregarUsuario()">Guardar</button>
    </form>
 

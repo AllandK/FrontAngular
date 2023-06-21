@@ -1,16 +1,16 @@
 <div class="container">
-    <form action="">
-        <label for="nombre" >Nombre</label>
-        <input  type="text" id="nombre" name="nombre"  [(ngModel)]="usuarioActual.nombre" >
+    <form>
+        <label for="nombre" class="control-label">Nombre</label>
+        <input  type="text" class="form-control" id="nombre" name="nombre"  [(ngModel)]="usuarioActual.nombre" >
         <br>
-        <label for="email" >Email</label>
-        <input  type="text" id="email" name="email"  [(ngModel)]="usuarioActual.email" >
+        <label for="email" class="control-label">Email</label>
+        <input  type="text" class="form-control" id="email" name="email"  [(ngModel)]="usuarioActual.email" >
         <br>
-        <label for="prioridad" >Prioridad</label>
-        <input  type="text" id="prioridad" name="prioridad"  [(ngModel)]="usuarioActual.prioridad" >
+        <label for="prioridad" class="control-label" >Prioridad</label>
+        <input  type="text" class="form-control" id="prioridad" name="prioridad"  [(ngModel)]="usuarioActual.prioridad" >
         <br>
-        <label for="estado" >Estado</label>
-        <input  type="checkbox" id="estado" name="estado"  [(ngModel)]="usuarioActual.estado" >
+        <label for="estado" class="control-label" >Estado</label>
+        <input  type="checkbox" class="text-muted" id="estado" name="estado"  [(ngModel)]="usuarioActual.estado" >
         <br>
         <button class="btn btn-primary" (click)="guardar()">Guardar</button>
   </form>
